@@ -2,15 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-//using TMPro;
+using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEditorInternal;
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 
 public class Clue : MonoBehaviour
 {
-    //public Text clue;
-    private string word = "unity";
+    public Text clue;
+    private string word = "unityu";
     private char[] clueLetters;
     void Start()
     {
@@ -35,29 +36,26 @@ public class Clue : MonoBehaviour
         {
             updatedClue += clueLetters.ElementAt(i) + " ";
         }
-        //clue.text = updatedClue;
+        clue.text = updatedClue;
     }
 
-    public void ModifyClue(char letter)
+    public void CheckGuess(char letter)
     {
         char[] letters = word.ToCharArray();
         for (int i = 0; i < letters.Length; i++)
         {
-            if (letters.ElementAt(i) == letter)
+            if (letter.Equals(letters.ElementAt(i)))
             {
+                //Modify Clue
                 clueLetters[i] = letter;
             }
-        }
-        
-    }
+            else
+            {
+                //decrement lives
+            }
 
-    public Boolean CheckGuess(char letter)
-    {
-        if (word.Contains(letter.ToString()))
-        {
-            return true;
         }
-        return false;
+
     }
 
 }
