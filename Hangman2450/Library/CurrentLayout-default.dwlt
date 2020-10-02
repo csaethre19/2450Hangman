@@ -43,12 +43,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1521.6
     height: 722.8
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 121
+=======
+    width: 1536
+    height: 731
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 53
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,10 +73,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1199.2
     y: 0
     width: 322.40002
     height: 722.8
+=======
+    x: 958
+    y: 0
+    width: 578
+    height: 731
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -93,8 +109,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 252
     height: 432
+=======
+    width: 201
+    height: 460
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -112,15 +133,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 432
     width: 1199.2
     height: 290.8
+=======
+    y: 460
+    width: 958
+    height: 271
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 14}
@@ -221,12 +248,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1199.2
     height: 722.8
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 122
+=======
+    width: 958
+    height: 731
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 54
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,12 +282,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1199.2
     height: 432
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 123
+=======
+    width: 958
+    height: 460
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 55
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,10 +312,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 252
     y: 0
     width: 947.19995
     height: 432
+=======
+    x: 201
+    y: 0
+    width: 757
+    height: 460
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -322,15 +374,15 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 264.80002
-    y: 73.6
-    width: 661
-    height: 439
+    x: 304
+    y: 72.66667
+    width: 1380
+    height: 816
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
@@ -348,15 +400,22 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.2000003
     y: 512.8
     width: 1198.2
     height: 269.8
+=======
+    x: 0
+    y: 533.60004
+    width: 957
+    height: 250
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -378,14 +437,24 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
   m_LastProjectPath: C:\Users\charl\Documents\GitHub\2450Hangman\Hangman2450
+=======
+  m_LastProjectPath: C:\Users\charl\Desktop\2450Project\HangmanApp
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 963d0000
     m_LastClickedID: 15766
     m_ExpandedIDs: 00000000963d000000ca9a3b
+=======
+    m_SelectedIDs: e23c0000
+    m_LastClickedID: 15586
+    m_ExpandedIDs: 00000000e23c000000ca9a3b
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,7 +509,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -457,7 +526,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -485,15 +554,22 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1206.4
     y: 80.8
     width: 321.40002
     height: 701.8
+=======
+    x: 958.4
+    y: 73.6
+    width: 577
+    height: 710
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -502,12 +578,16 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
+<<<<<<< HEAD
   m_LastVerticalScrollValue: 180
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+=======
+  m_LastVerticalScrollValue: 0
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -524,22 +604,33 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.2000003
     y: 80.8
     width: 251
     height: 411
+=======
+    x: 0
+    y: 73.6
+    width: 200
+    height: 439
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: ced4ffff4a3c0000883c0000
+=======
+      m_ExpandedIDs: 36fbffff
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -555,7 +646,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -579,15 +670,22 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 259.2
     y: 80.8
     width: 945.19995
     height: 411
+=======
+    x: 200.8
+    y: 73.6
+    width: 755
+    height: 439
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: d69a67902db7f994ca099bec79d22ce1
@@ -600,9 +698,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 4.6000004, y: 6.0200005, z: -27.239998}
     speed: 2
     m_Value: {x: 4.5999994, y: 6.02, z: -27.239996}
+=======
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -649,6 +753,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.22130391, y: -0.05409202, z: 0.012294611, w: 0.9736303}
     speed: 2
     m_Value: {x: 0.22132118, y: -0.052631296, z: 0.011962591, w: 0.9737063}
@@ -656,6 +761,15 @@ MonoBehaviour:
     m_Target: 12.124355
     speed: 2
     m_Value: 12.124356
+=======
+    m_Target: {x: -0.07218549, y: 0.8730804, z: -0.13625164, w: -0.46255413}
+    speed: 2
+    m_Value: {x: -0.07116155, y: 0.8765246, z: -0.13678916, w: -0.45599294}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 2.2978258
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -696,15 +810,22 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 259.2
     y: 80.8
     width: 945.19995
     height: 411
+=======
+    x: 304
+    y: 72.66667
+    width: 1380
+    height: 816
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -712,7 +833,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 1024, y: 768}
+=======
+  m_TargetSize: {x: 1380, y: 776}
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -721,16 +846,27 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
+<<<<<<< HEAD
   m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
+=======
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -409.6
     m_HBaseRangeMax: 409.6
     m_VBaseRangeMin: -307.2
     m_VBaseRangeMax: 307.2
+=======
+    m_HBaseRangeMin: -690
+    m_HBaseRangeMax: 690
+    m_VBaseRangeMin: -388
+    m_VBaseRangeMax: 388
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -747,17 +883,26 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 21
       width: 945.19995
       height: 390
     m_Scale: {x: 0.6347656, y: 0.6347656}
     m_Translation: {x: 472.59998, y: 195.00002}
+=======
+      y: 0
+      width: 1380
+      height: 816
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 690, y: 408}
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -744.52673
       y: -307.2
       width: 1489.0535
@@ -765,6 +910,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.6347656
   m_LastWindowPixelSize: {x: 1181.5, y: 513.75}
+=======
+      x: -690
+      y: -408
+      width: 1380
+      height: 816
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1380, y: 816}
+>>>>>>> parent of 2708854... sets up first scene: gallows and shelves
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -786,15 +940,15 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 533.60004
-    width: 1259
-    height: 250
+    y: 895
+    width: 1977
+    height: 440
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &20
 MonoBehaviour:
