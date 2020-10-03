@@ -566,6 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 718439352}
   thrust: 100
+  letter: 117
 --- !u!4 &740231833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 954661436726211756, guid: ab29d0fedb34013428aad6c9fbbe939e, type: 3}

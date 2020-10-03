@@ -6,8 +6,8 @@ using UnityEngine;
 public class FreakOutCan : MonoBehaviour
 {
     public Rigidbody rb;
-    public float thrust = 100;
-    private char letter;
+    public float thrust;
+    public char letter;
     GameObject text;
     Clue clue;
 
@@ -21,7 +21,6 @@ public class FreakOutCan : MonoBehaviour
 
     public void Click()
     {
-        letter = 'u';
         rb.AddForce(transform.forward * thrust);
         clue.CheckGuess(letter);
     }
