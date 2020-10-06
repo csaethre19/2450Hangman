@@ -21,6 +21,7 @@ public class Clue : MonoBehaviour
             clueLetters[i] = '_';
         }
         PrintClue();
+        GameEvent.current.onGuessCheckLetter += CheckGuess;
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class Clue : MonoBehaviour
         clue.text = updatedClue;
     }
 
-    public void CheckGuess(char letter)
+    private void CheckGuess(char letter)
     {
         char[] letters = word.ToCharArray();
         for (int i = 0; i < letters.Length; i++)
