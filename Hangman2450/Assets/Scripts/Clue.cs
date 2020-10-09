@@ -10,16 +10,16 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour
 {
-    public Text clue;
-    private string word = "abcd";
-    private char[] clueArray;
-    private int lives = 6;
+    private Text clue;
+    public GameObject clueObj;
+    private string word = "crazy";
+    private List<String> clueLetters = new List<String>();
     void Start()
     {
-        clueArray = new char[word.Length];
+        clue = clueObj.GetComponent<Text>();
         for (int i = 0; i < word.Length; i++)
         {
-            clueArray[i] = '_';
+            clueLetters.Add("_");
         }
         PrintClue();
         GameEvent.current.onGuessCheckLetter += CheckGuess;
@@ -34,9 +34,9 @@ public class Clue : MonoBehaviour
     private void PrintClue()
     {
         string updatedClue = "";
-        for (int i = 0; i < clueArray.Length; i++)
+        for (int i = 0; i < clueLetters.Count; i++)
         {
-            updatedClue += clueArray[i] + " ";
+            updatedClue += clueLetters[i] + " ";
         }
         clue.text = updatedClue;
     }
@@ -49,16 +49,14 @@ public class Clue : MonoBehaviour
             if (word[i] == letter)
             {
                 //Modify Clue
-                clueArray[i] = letter;
+                clueLetters.Insert(i, letter.ToString());
+                clueLetters.RemoveAt(i + 1);
                 correct = true;
             }
         }
-        if (!correct) lives--;
-        Debug.Log("Lives remaining: " + lives);
+        if (!correct) GameEvent.current.decrement();
         //check for win
-        if (lives == 0) Debug.Log("You have lost!");
-        string clueString = string.Join("", clueArray);
-        if (clueString.Equals(word))
+        if (!clueLetters.Contains("_"))
         {
             Debug.Log("You have won!");
         }
