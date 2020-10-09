@@ -11,14 +11,15 @@ using UnityEngine.UI;
 public class Clue : MonoBehaviour
 {
     public Text clue;
-    private string word = "unityu";
-    private char[] clueLetters;
+    private string word = "abcd";
+    private char[] clueArray;
+    private int lives = 6;
     void Start()
     {
-        clueLetters = new char[word.Length];
+        clueArray = new char[word.Length];
         for (int i = 0; i < word.Length; i++)
         {
-            clueLetters[i] = '_';
+            clueArray[i] = '_';
         }
         PrintClue();
         GameEvent.current.onGuessCheckLetter += CheckGuess;
@@ -33,28 +34,33 @@ public class Clue : MonoBehaviour
     private void PrintClue()
     {
         string updatedClue = "";
-        for (int i = 0; i < clueLetters.Length; i++)
+        for (int i = 0; i < clueArray.Length; i++)
         {
-            updatedClue += clueLetters.ElementAt(i) + " ";
+            updatedClue += clueArray[i] + " ";
         }
         clue.text = updatedClue;
     }
 
     private void CheckGuess(char letter)
     {
-        char[] letters = word.ToCharArray();
-        for (int i = 0; i < letters.Length; i++)
+        Boolean correct = false;
+        for (int i = 0; i < word.Length; i++)
         {
-            if (letter.Equals(letters.ElementAt(i)))
+            if (word[i] == letter)
             {
                 //Modify Clue
-                clueLetters[i] = letter;
+                clueArray[i] = letter;
+                correct = true;
             }
-            else
-            {
-                //decrement lives
-            }
-
+        }
+        if (!correct) lives--;
+        Debug.Log("Lives remaining: " + lives);
+        //check for win
+        if (lives == 0) Debug.Log("You have lost!");
+        string clueString = string.Join("", clueArray);
+        if (clueString.Equals(word))
+        {
+            Debug.Log("You have won!");
         }
 
     }
