@@ -13,10 +13,9 @@ public class FreakOutCan : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        GameEvent.current.onClickTriggerGuess += Click;
     }
 
-    private void Click()
+    public void Click()
     {
         rb.AddForce(transform.forward * thrust);
         GameEvent.current.guessLetter(letter);

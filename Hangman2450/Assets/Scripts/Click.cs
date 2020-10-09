@@ -11,7 +11,11 @@ public class Click : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameEvent.current.canClicked();
+            RaycastHit rayHit;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit, Mathf.Infinity, clickableLayer))
+            {
+                rayHit.collider.GetComponent<FreakOutCan>().Click();
+            }
         }
     }
 }

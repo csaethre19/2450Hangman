@@ -12,15 +12,6 @@ public class GameEvent : MonoBehaviour
         current = this;
     }
 
-    public event Action onClickTriggerGuess;
-    public void canClicked()
-    {
-        if (onClickTriggerGuess != null)
-        {
-            onClickTriggerGuess();
-        }
-    }
-
     public event Action<char> onGuessCheckLetter;
     public void guessLetter(char letter)
     {
