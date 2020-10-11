@@ -21,4 +21,13 @@ public class GameEvent : MonoBehaviour
         }
     }
 
+    public event Action TriggerDecrementLives;
+    public void decrement()
+    {
+        if (TriggerDecrementLives != null)
+        {
+            TriggerDecrementLives();
+        }
+    }
+
 }

@@ -10,15 +10,16 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour
 {
-    public Text clue;
-    private string word = "unityu";
-    private char[] clueLetters;
+    private Text clue;
+    public GameObject clueObj;
+    private string word = "crazy";
+    private List<String> clueLetters = new List<String>();
     void Start()
     {
-        clueLetters = new char[word.Length];
+        clue = clueObj.GetComponent<Text>();
         for (int i = 0; i < word.Length; i++)
         {
-            clueLetters[i] = '_';
+            clueLetters.Add("_");
         }
         PrintClue();
         GameEvent.current.onGuessCheckLetter += CheckGuess;
@@ -33,28 +34,31 @@ public class Clue : MonoBehaviour
     private void PrintClue()
     {
         string updatedClue = "";
-        for (int i = 0; i < clueLetters.Length; i++)
+        for (int i = 0; i < clueLetters.Count; i++)
         {
-            updatedClue += clueLetters.ElementAt(i) + " ";
+            updatedClue += clueLetters[i] + " ";
         }
         clue.text = updatedClue;
     }
 
     private void CheckGuess(char letter)
     {
-        char[] letters = word.ToCharArray();
-        for (int i = 0; i < letters.Length; i++)
+        Boolean correct = false;
+        for (int i = 0; i < word.Length; i++)
         {
-            if (letter.Equals(letters.ElementAt(i)))
+            if (word[i] == letter)
             {
                 //Modify Clue
-                clueLetters[i] = letter;
+                clueLetters.Insert(i, letter.ToString());
+                clueLetters.RemoveAt(i + 1);
+                correct = true;
             }
-            else
-            {
-                //decrement lives
-            }
-
+        }
+        if (!correct) GameEvent.current.decrement();
+        //check for win
+        if (!clueLetters.Contains("_"))
+        {
+            Debug.Log("You have won!");
         }
 
     }
