@@ -18,6 +18,7 @@ public class FreakOutCan : MonoBehaviour
     public void Click()
     {
         rb.AddForce(transform.forward * thrust);
-        GameEvent.current.guessLetter(letter);
+        Debug.Log("Clicked: " + letter);
+        CustomGameEventSystem.BroadcastGuessLetter(letter);
     }
 }

@@ -10,19 +10,24 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour
 {
-    private Text clue;
-    public GameObject clueObj;
-    private string word = "crazy";
-    private List<String> clueLetters = new List<String>();
+
+    private Text clue; 
+    private string word = "crazy"; //TODO get random word from wordlist
+    private List<String> clueLetters;
+
+
     void Start()
     {
-        clue = clueObj.GetComponent<Text>();
+        clue = gameObject.GetComponent<Text>();
+        clueLetters = new List<String>();
+
         for (int i = 0; i < word.Length; i++)
         {
             clueLetters.Add("_");
         }
+
         PrintClue();
-        GameEvent.current.onGuessCheckLetter += CheckGuess;
+        CustomGameEventSystem.onGuess += CheckGuess;
     }
 
     // Update is called once per frame
@@ -54,7 +59,9 @@ public class Clue : MonoBehaviour
                 correct = true;
             }
         }
-        if (!correct) GameEvent.current.decrement();
+        if (!correct) {
+            CustomGameEventSystem.BroadcastChangeLives(-1);
+        }
         //check for win
         if (!clueLetters.Contains("_"))
         {
