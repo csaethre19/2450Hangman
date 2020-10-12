@@ -13,7 +13,7 @@ public class Lives : MonoBehaviour
     void Start()
     {
         livesText = livesObj.GetComponent<Text>();
-        GameEvent.current.TriggerDecrementLives += DecrementLives;
+        CustomGameEventSystem.onChangeLives += changeLives;
     }
 
     // Update is called once per frame
@@ -29,8 +29,8 @@ public class Lives : MonoBehaviour
         }
     }
 
-    public void DecrementLives()
+    public void changeLives(int n)
     {
-        lives--;
+        lives += n;
     }
 }
