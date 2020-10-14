@@ -20,15 +20,8 @@ public class GunShot : MonoBehaviour
     if(Input.GetMouseButtonDown(0) == true)
     {
      GetComponent<AudioSource>().Play();
-    
     } 
-    // If the left mouse button is released...
-    if(Input.GetMouseButtonUp(0) == true)
-    {
 
-   	GetComponent<AudioSource>().Stop();
-
-    }
  }
 
 
