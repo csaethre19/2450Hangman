@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomGameEventSystem: MonoBehaviour
+public class CustomGameEventSystem : MonoBehaviour
 {
     //delegate holds any method that takes one char as an argument
     public delegate void Guess(char letter);
@@ -16,7 +16,7 @@ public class CustomGameEventSystem: MonoBehaviour
     public static void BroadcastGuessLetter(char letter)
     {
         //make sure we have people that are listening for our event
-        if(onGuess != null)
+        if (onGuess != null)
         {
             //broadcast event with the letter we were passed
             onGuess(letter);
@@ -32,6 +32,16 @@ public class CustomGameEventSystem: MonoBehaviour
         if (onChangeLives != null)
         {
             onChangeLives(n);
+        }
+    }
+
+    public delegate void Word(String s);
+    public static event Word getWordFromList;
+    public static void BroadcastWordFromList(String s)
+    {
+        if (getWordFromList != null)
+        {
+            getWordFromList(s);
         }
     }
 
