@@ -10,14 +10,17 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour
 {
-
     private Text clue; 
-    private string word = "crazy"; //TODO get random word from wordlist
+    private string word = ""; //TODO get random word from wordlist
     private List<String> clueLetters;
 
 
     void Start()
     {
+        WordListImport.ReadCSVFile();
+        GetWord(word);
+        CustomGameEventSystem.getWordFromList += GetWord;
+
         clue = gameObject.GetComponent<Text>();
         clueLetters = new List<String>();
 
@@ -69,5 +72,12 @@ public class Clue : MonoBehaviour
         }
 
     }
+
+    private void GetWord(String s)
+    {
+        word = WordListImport.getWord();
+        CustomGameEventSystem.BroadcastWordFromList(word);
+    }
+
 
 }
