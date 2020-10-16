@@ -45,4 +45,14 @@ public class CustomGameEventSystem : MonoBehaviour
         }
     }
 
+    public delegate void GameFinished(bool gameWon);
+    public static event GameFinished onGameFinished;
+
+
+    public static void BroadcastGameFinished(bool gameWon) {
+        if (onGameFinished != null) {
+            onGameFinished(gameWon);
+        }
+    }
+
 }
