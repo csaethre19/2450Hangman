@@ -9663,7 +9663,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
@@ -9687,7 +9687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 203ede1dc8908854b9758d2d82094270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  livesObj: {fileID: 1788047458}
 --- !u!4 &1833597299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8595704643324563070, guid: b150f3143002c41419402721a814aa8f, type: 3}

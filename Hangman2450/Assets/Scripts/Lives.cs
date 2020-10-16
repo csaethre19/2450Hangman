@@ -6,31 +6,50 @@ using UnityEngine.UI;
 public class Lives : MonoBehaviour
 {
     private Text livesText;
-    public GameObject livesObj;
     private int lives = 6;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        livesText = livesObj.GetComponent<Text>();
+        livesText = gameObject.GetComponent<Text>();
         CustomGameEventSystem.onChangeLives += changeLives;
+        CustomGameEventSystem.onGameFinished += GameFinished;
+        livesText.text = "Lives: " + lives;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lives > 0)
-        {
-            livesText.text = "Lives: " + lives;
-        }
-        else
-        {
-            livesText.text = "You have lost!";
-        }
+      
     }
 
     public void changeLives(int n)
     {
-        lives += n;
+        if(lives != 0) {
+            lives += n;
+        }
+        livesText.text = "Lives: " + lives;
+
+        if (lives == 0) {
+            CustomGameEventSystem.BroadcastGameFinished(false);
+            GameFinished(false);
+
+        }
+       
+    }
+
+    private void GameFinished(bool gameWon) {
+
+
+        Debug.Log("Game won: " + gameWon);
+        if (gameWon) {
+            livesText.text = "You Won!";
+        }
+        else {
+            livesText.text = "Sorry. You Lost.";
+        }
+
     }
 }
