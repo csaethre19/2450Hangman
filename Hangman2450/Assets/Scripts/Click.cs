@@ -14,7 +14,7 @@ public class Click : MonoBehaviour
             RaycastHit rayHit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit, Mathf.Infinity, clickableLayer))
             {
-                rayHit.collider.GetComponent<FreakOutCan>().Click();
+                rayHit.collider.GetComponent<Can>().Click();
             }
         }
     }
