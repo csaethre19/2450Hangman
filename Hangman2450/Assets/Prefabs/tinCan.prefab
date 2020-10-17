@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5445253179688192265}
   - component: {fileID: 6652090752007381250}
   - component: {fileID: 6652090752007381251}
-  - component: {fileID: 6652090752007381254}
+  - component: {fileID: 895109989073414559}
   m_Layer: 8
   m_Name: tinCan
   m_TagString: Untagged
@@ -114,7 +114,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0005407178, y: 0.0005407178, z: 0.0007884405}
   m_Center: {x: 0, y: 3.8230824e-18, z: 0.0003785487}
---- !u!114 &6652090752007381254
+--- !u!114 &895109989073414559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6652090752007381250}
-  thrust: 500
-  letter: 97
+  thrust: 200
+  letter: 0
 --- !u!1 &6652090750477757340
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -359.917}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: 299}
+  m_AnchoredPosition: {x: -89.1, y: 347.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6652090750477757313
@@ -196,8 +196,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2e062594ef873546afad4e43c75c10e, type: 2}
+  m_sharedMaterial: {fileID: 2806934678727085863, guid: d2e062594ef873546afad4e43c75c10e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

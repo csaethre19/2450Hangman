@@ -10,7 +10,7 @@ public class Lives : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         livesText = gameObject.GetComponent<Text>();
         CustomGameEventSystem.onChangeLives += changeLives;
@@ -25,11 +25,17 @@ public class Lives : MonoBehaviour
       
     }
 
+    private void OnDestroy() {
+        CustomGameEventSystem.onChangeLives -= changeLives;
+        CustomGameEventSystem.onGameFinished -= GameFinished;
+    }
+
     public void changeLives(int n)
     {
         if(lives != 0) {
             lives += n;
         }
+
         livesText.text = "Lives: " + lives;
 
         if (lives == 0) {

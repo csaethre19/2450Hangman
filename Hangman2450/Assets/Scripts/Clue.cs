@@ -48,6 +48,11 @@ public class Clue : MonoBehaviour
     {
     }
 
+    private void OnDestroy() {
+        CustomGameEventSystem.onGuess -= CheckGuess;
+        CustomGameEventSystem.onGameFinished -= GameFinished;
+    }
+
     private void PrintClue()
     {
         if (!gameFinished) {
@@ -89,7 +94,6 @@ public class Clue : MonoBehaviour
         gameFinished = true;
         Debug.Log("setting clue txt to word");
         clue.text = word.ToUpper();
-        clue = null;
     }
 
 
