@@ -5,12 +5,18 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
 
-    public AudioSource gunshotSound;
+     AudioSource gunshotSound;
+
+    public float minVolume;
+    public float maxVolume;
+    [Space(20)]
+    public float minPitch;
+    public float maxPitch;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gunshotSound= gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,7 +25,11 @@ public class GunShot : MonoBehaviour
     // If the left mouse button is pressed down...
     if(Input.GetMouseButtonDown(0) == true)
     {
-     GetComponent<AudioSource>().Play();
+
+            gunshotSound.volume =  Random.Range(minVolume,maxVolume);
+            gunshotSound.pitch = Random.Range(minPitch, maxPitch);
+            gunshotSound.Play();
+
     } 
 
  }
