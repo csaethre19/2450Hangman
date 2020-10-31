@@ -5,18 +5,19 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using TMPro;
+using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Clue : MonoBehaviour
 {
     private Text clue; 
-    private string word = ""; //TODO get random word from wordlist
+    private string word = "";
     private List<String> clueLetters;
     bool gameFinished;
-
 
     void Start()
     {
@@ -110,15 +111,40 @@ public class Clue : MonoBehaviour
     public static class WordListImport {
         public static string[] data_values;
         public static string gameWord;
+        public static string wordList; //Assigned when setWordListPath is called
 
+        public static void setWordListPath()
+        {
+            string line = "";
+            string level = "";
+            StreamReader strReader = new StreamReader("Assets//WordBank//Level.txt");
+            while ((line = strReader.ReadLine()) != null)
+            {
+                level = line;
+            }
 
+            switch (level)
+            {
+                default:
+                    wordList = "List_1.csv";
+                    break;
+                case "1":
+                    wordList = "List_2.csv";
+                    break;
+                case "2":
+                    wordList = "List_3.csv";
+                    break;
+            }
+        }
 
         public static void ReadCSVFile() {
 
+            //Set the file path based on player selected level difficulty written to file during start menu scene
+            setWordListPath();
+            Debug.Log(wordList);
+
             //Scream the word to clue/ Event listener
-
-            StreamReader strReader = new StreamReader("Assets//WordBank//List_1.csv");
-
+            StreamReader strReader = new StreamReader("Assets//WordBank//" + wordList);
             bool endOfFile = false;
             while (!endOfFile) {
                 string data_String = strReader.ReadLine();
@@ -127,15 +153,7 @@ public class Clue : MonoBehaviour
                     endOfFile = true;
                     break;
                 }
-
                 data_values = data_String.Split(',');
-
-                for (int i = 0; i < data_values.Length; i++) {
-                    Debug.Log(data_values[i].ToString());
-                }
-
-                Debug.Log("File Imported");
-                //getWord();
             }
         }
 
