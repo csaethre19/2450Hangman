@@ -109,7 +109,11 @@ public class Clue : MonoBehaviour
      * */
     public static class WordListImport {
         public static string[] data_values;
+        public static List<string> easyWords = new List<string>();
+        public static List<string> mediumWords = new List<string>();
+        public static List<string> hardWords = new List<string>();
         public static string gameWord;
+<<<<<<< Updated upstream
 
 
 
@@ -145,6 +149,75 @@ public class Clue : MonoBehaviour
 
             Debug.Log("Word Fetched from Index" + randomWordIndex);
             gameWord = data_values[randomWordIndex];
+=======
+        public static string wordList; 
+
+        public static void ReadCSVFile() {
+            
+            //Scream the word to clue/ Event listener
+            StreamReader strReader = new StreamReader("Assets//WordBank//List_1.csv");
+            Debug.Log(wordList);
+            bool endOfFile = false;
+            while (!endOfFile) {
+                string data_String = strReader.ReadLine();
+
+                if (data_String == null) {
+                    endOfFile = true;
+                    break;
+                }
+                data_values = data_String.Split(',');
+
+                for (int i = 0; i < data_values.Length; i++)
+                {
+                    if (data_values[i].Length <= 4)
+                    {
+                        easyWords.Add(data_values[i]);
+                        Debug.Log(data_values[i].ToString() + " was Added to Easy List!");
+                    }
+                    if (data_values[i].Length <= 8 && data_values[i].Length > 4)
+                    {
+                        mediumWords.Add(data_values[i]);
+                        Debug.Log(data_values[i].ToString() + " was Added to Medium List!");
+                    }
+                    if (data_values[i].Length > 8)
+                    {
+                        hardWords.Add(data_values[i]);
+                        Debug.Log(data_values[i].ToString() + " was Added to Hard List!");
+                    }
+                }
+            }
+            Debug.Log("File Imported");
+        }
+
+        public static string getWord() {
+
+            string line = "";
+            string level = "";
+            StreamReader strReader = new StreamReader("Assets//WordBank//Level.txt");
+            while ((line = strReader.ReadLine()) != null)
+            {
+                level = line;
+            }
+
+            int randomWordIndex = -1;
+
+            Debug.Log("Fetching a Word");
+            switch (level)
+            {
+                default:
+                    randomWordIndex = Random.Range(0, easyWords.Count);
+                    gameWord = easyWords[randomWordIndex];
+                    break;
+                case "1":
+                    randomWordIndex = Random.Range(0, mediumWords.Count);
+                    gameWord = mediumWords[randomWordIndex];
+                    break;
+                case "2":
+                    randomWordIndex = Random.Range(0, hardWords.Count);
+                    gameWord = hardWords[randomWordIndex];
+                    break;
+            }
+>>>>>>> Stashed changes
 
             Debug.Log("Here be the word: " + gameWord);
             return gameWord;
