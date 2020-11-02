@@ -113,50 +113,11 @@ public class Clue : MonoBehaviour
         public static List<string> mediumWords = new List<string>();
         public static List<string> hardWords = new List<string>();
         public static string gameWord;
-<<<<<<< Updated upstream
-
-
-
-        public static void ReadCSVFile() {
-
-            //Scream the word to clue/ Event listener
-
-            StreamReader strReader = new StreamReader("Assets//WordBank//List_1.csv");
-
-            bool endOfFile = false;
-            while (!endOfFile) {
-                string data_String = strReader.ReadLine();
-
-                if (data_String == null) {
-                    endOfFile = true;
-                    break;
-                }
-
-                data_values = data_String.Split(',');
-
-                for (int i = 0; i < data_values.Length; i++) {
-                    Debug.Log(data_values[i].ToString());
-                }
-
-                Debug.Log("File Imported");
-                //getWord();
-            }
-        }
-
-        public static string getWord() {
-            Debug.Log("Fetching a Word");
-            int randomWordIndex = Random.Range(0, data_values.Length);
-
-            Debug.Log("Word Fetched from Index" + randomWordIndex);
-            gameWord = data_values[randomWordIndex];
-=======
-        public static string wordList; 
 
         public static void ReadCSVFile() {
             
             //Scream the word to clue/ Event listener
             StreamReader strReader = new StreamReader("Assets//WordBank//List_1.csv");
-            Debug.Log(wordList);
             bool endOfFile = false;
             while (!endOfFile) {
                 string data_String = strReader.ReadLine();
@@ -217,7 +178,6 @@ public class Clue : MonoBehaviour
                     gameWord = hardWords[randomWordIndex];
                     break;
             }
->>>>>>> Stashed changes
 
             Debug.Log("Here be the word: " + gameWord);
             return gameWord;
