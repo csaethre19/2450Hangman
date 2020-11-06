@@ -7,9 +7,14 @@ public class HangingBody : MonoBehaviour
     GameObject daveRagdoll;
     GameObject daveRegular;
     Animator daveAnimator;
+
+    bool gameFinished;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        gameFinished = false;
         CustomGameEventSystem.onGameFinished += GameFinish;
         CustomGameEventSystem.onChangeLives += Wrong;
 
@@ -29,17 +34,29 @@ public class HangingBody : MonoBehaviour
     }
     void GameFinish(bool gameWon) {
 
-        if (!gameWon) {
+        if (!gameFinished) {
 
-            daveRegular.SetActive(false);
-            daveRagdoll.SetActive(true);
+            gameFinished = true;
+
+            if (!gameWon) {
+
+                daveRegular.SetActive(false);
+                daveRagdoll.SetActive(true);
+            }
+            if (gameWon) {
+                transform.Find("Rope").gameObject.SetActive(false);
+                daveAnimator.SetTrigger("GameWon");
+            }
+
+
         }
-        if (gameWon) {
-            transform.Find("Rope").gameObject.SetActive(false);
-            daveAnimator.SetTrigger("GameWon");
-        }
+        
     }
     void Wrong(int lives) {
-        daveAnimator.SetTrigger("Wrong");
+        if (!gameFinished) {
+            daveAnimator.SetTrigger("Wrong");
+
+        }
+
     }
 }
