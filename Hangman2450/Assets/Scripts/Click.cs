@@ -41,4 +41,9 @@ public class Click : MonoBehaviour
             }
         }
     }
+
+    public void DisableClick()
+    {
+        this.enabled = !this.enabled;
+    }
 }

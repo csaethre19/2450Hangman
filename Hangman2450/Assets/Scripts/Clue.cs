@@ -17,7 +17,6 @@ public class Clue : MonoBehaviour
     private List<String> clueLetters;
     bool gameFinished;
 
-
     void Start()
     {
         //Read CSV File and get a word into our word variable
@@ -41,11 +40,6 @@ public class Clue : MonoBehaviour
         CustomGameEventSystem.onGuess += CheckGuess;
         CustomGameEventSystem.onGameFinished += GameFinished;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     private void OnDestroy() {

@@ -33,6 +33,10 @@ public class GunShot : MonoBehaviour
     } 
 
  }
+    public void DisableGunShot()
+    {
+        this.enabled = !this.enabled;
+    }
 
 
 
