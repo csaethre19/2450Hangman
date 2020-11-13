@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CustomGameEventSystem : MonoBehaviour
 {
+    
     //delegate holds any method that takes one char as an argument
     public delegate void Guess(char letter);
 
