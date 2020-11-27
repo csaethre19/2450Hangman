@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject optMenu;
     public GameObject mainMenu;
+
     private void Start()
     {
         Screen.SetResolution(1920,1080, true);//sets our resolution to 1920x1080 and fullscreen so our UI doesn't look gross

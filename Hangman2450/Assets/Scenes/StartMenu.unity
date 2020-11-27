@@ -10361,6 +10361,10 @@ PrefabInstance:
       propertyPath: optMenu
       value: 
       objectReference: {fileID: 892205718}
+    - target: {fileID: 6410509976759189779, guid: 25452a17d82a640469df1f82b595fa2a, type: 3}
+      propertyPath: altGameMode
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6410509976759189781, guid: 25452a17d82a640469df1f82b595fa2a, type: 3}
       propertyPath: m_IsActive
       value: 1

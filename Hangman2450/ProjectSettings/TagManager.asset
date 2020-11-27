@@ -7,6 +7,10 @@ TagManager:
   - Can
   - VFX
   - Dave
+  - Fire
+  - spawn
+  - obstacle
+  - death
   layers:
   - Default
   - TransparentFX

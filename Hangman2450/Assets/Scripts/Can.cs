@@ -16,6 +16,8 @@ public class Can : MonoBehaviour {
     [Space(20)]
     public float minPitch;
     public float maxPitch;
+	
+	private bool hit = false;
 
 
     // Start is called before the first frame update
@@ -25,6 +27,8 @@ public class Can : MonoBehaviour {
     }
 
     public void Click() {
+		if (!hit){
+		hit = true;
         rb.AddForce(transform.up * -Random.Range(minThrust, maxThrust));
         Debug.Log("Clicked: " + letter);
         CustomGameEventSystem.BroadcastGuessLetter(letter);
@@ -32,6 +36,6 @@ public class Can : MonoBehaviour {
         pingSound.volume = Random.Range(minVolume, maxVolume);
         pingSound.pitch = Random.Range(minPitch, maxPitch);
         pingSound.Play();
-
+		}
     }
 }
