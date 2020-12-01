@@ -21,8 +21,6 @@ public class timeManager : MonoBehaviour
 	public ToggleCameraComponents toggle;
 	
 	void Start() {
-		bgMusic.pitch = 1f;
-		Time.timeScale = 1f;
 		status.text = "";
 		replay.text = "";
 		toggle.disableGlitch();
@@ -33,10 +31,8 @@ public class timeManager : MonoBehaviour
 		Time.fixedDeltaTime = Time.timeScale * 0.02f;
 	}
 
-    // Update is called once per frame
     void Update()
     {
-		//pause menu
        if(Input.GetKeyDown(KeyCode.P) && gameOver == false){
 		   if(paused == true){
 			   toggle.disableGlitch();
@@ -60,13 +56,12 @@ public class timeManager : MonoBehaviour
 			Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 		 }
 		
-		if(Input.GetKeyDown("space") && gameOver){
+		if(Input.GetKeyDown("space") && gameOver && Time.timeScale == 1f){
 			restartGame();
 		}
 		
 		bgMusic.pitch = Time.timeScale;
     }
-	
 	
 	public void endGame(){
 		gameOver = true;
@@ -80,6 +75,7 @@ public class timeManager : MonoBehaviour
 	}
 	
 	void restartGame(){
+		Time.timeScale = 1f;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

@@ -7,18 +7,16 @@ public class Spawner : MonoBehaviour
 	GameObject[] spawns;
 	GameObject[] obstacles = new GameObject[2];
 	
-	public float spawnTime = 2f;
-	public float spawnTimer;
-	public int luck = 80;
-	public int scorePointer = 2000;
+	float spawnTime = 2f;
+	float spawnTimer;
+	int luck = 100;
+	int scorePointer = 5000;
 	int rndPos;
 	int rndObs;
 	
 	public GameObject ob1;
 	public timeManager TimeManager;
 	
-	
-    // Start is called before the first frame update
     void Start()
     {
 		luck = 100;
@@ -29,17 +27,16 @@ public class Spawner : MonoBehaviour
 		obstacles[1] = ob1;
     }
 
-    // Update is called once per frame
     void Update()
     {
 		if (TimeManager.score > scorePointer){
-			if (spawnTime > 0){
-				spawnTime -= .05f;
-			}
 			if (luck > 0){
-				luck -= 8;
+				luck -= 10;
 			}
-			scorePointer += 2000;
+			if (spawnTime > .5f){
+				spawnTime -= .1f;
+			}
+			scorePointer += 5000;
 		}
 		
 		if(TimeManager.gameOver == false){
@@ -47,31 +44,34 @@ public class Spawner : MonoBehaviour
 		}
     }
 	
+	
 	void spawnObstacle(){
 		spawnTimer -= Time.deltaTime;
 		if (spawnTimer <= 0) {
 			rndObs = Random.Range(0, obstacles.Length);
 			rndPos = Random.Range(0, spawns.Length);
 			if (Random.Range(0,100) > luck){
-				doubleSpawn();
+				doubleSpawn(rndObs);
 			} else {
-				singleSpawn();
+				singleSpawn(rndObs, rndPos);
 			}
 			spawnTimer = spawnTime;
 		}
 	}
 	
-	void singleSpawn(){
-		Instantiate(obstacles[rndObs], spawns[rndPos].transform.position, obstacles[rndObs].transform.rotation);
+	void singleSpawn(int obs, int pos){
+		Instantiate(obstacles[obs], spawns[pos].transform.position, obstacles[obs].transform.rotation);
 	}
 	
-	void doubleSpawn(){
-		int secondPos = Random.Range(0, spawns.Length);
-		if (secondPos == rndPos){
-			doubleSpawn();
-		} else {
-			Instantiate(obstacles[rndObs], spawns[rndPos].transform.position, obstacles[rndObs].transform.rotation);
-			Instantiate(obstacles[rndObs], spawns[secondPos].transform.position, obstacles[rndObs].transform.rotation);
+	void doubleSpawn(int obs){
+		List<GameObject> spawnCopy = new List<GameObject>();
+		foreach (GameObject obj in spawns){
+			spawnCopy.Add(obj);
 		}
+		int firstPos = Random.Range(0, spawns.Length);
+		singleSpawn(obs, firstPos);
+		spawnCopy.RemoveAt(firstPos);
+		int secondPos = Random.Range(0, spawnCopy.Count);
+		Instantiate(obstacles[obs], spawnCopy[secondPos].transform.position, obstacles[obs].transform.rotation);
 	}
 }

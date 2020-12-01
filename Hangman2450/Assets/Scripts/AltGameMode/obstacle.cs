@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class obstacle : MonoBehaviour
 {
-	public Rigidbody rb;
-	public float speed = 0.4f;
+	public float speed = 1f;
+	
 
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "death"){
@@ -13,10 +13,13 @@ public class obstacle : MonoBehaviour
 		}
 	}
 	
+	void Start(){
+	}
 
-    // Update is called once per frame
     void Update()
     {
-        rb.AddForce(0,0,-speed, ForceMode.Impulse);
+		if (Time.timeScale != 0){
+			gameObject.transform.position += Vector3.back * speed;
+		}
     }
 }
