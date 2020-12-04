@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         Screen.SetResolution(1920,1080, true);//sets our resolution to 1920x1080 and fullscreen so our UI doesn't look gross
 
         using (StreamWriter writer = new StreamWriter("Assets//WordBank//Level.txt"))
