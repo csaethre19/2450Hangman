@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunShot : MonoBehaviour
 {
 
-     AudioSource gunshotSound;
+    AudioSource gunshotSound;
 
     public float minVolume;
     public float maxVolume;

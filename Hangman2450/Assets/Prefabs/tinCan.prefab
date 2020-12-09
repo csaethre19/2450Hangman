@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6652090752007381250}
-  minThrust: 200
+  minThrust: 500
   maxThrust: 1000
   letter: 0
   minVolume: 0.1
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2e062594ef873546afad4e43c75c10e, type: 2}
   m_sharedMaterial: {fileID: 2806934678727085863, guid: d2e062594ef873546afad4e43c75c10e, type: 2}

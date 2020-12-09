@@ -33,6 +33,8 @@ public class Can : MonoBehaviour {
         Debug.Log("Clicked: " + letter);
         CustomGameEventSystem.BroadcastGuessLetter(letter);
 
+		AltGame.score += 1;
+
         pingSound.volume = Random.Range(minVolume, maxVolume);
         pingSound.pitch = Random.Range(minPitch, maxPitch);
         pingSound.Play();
